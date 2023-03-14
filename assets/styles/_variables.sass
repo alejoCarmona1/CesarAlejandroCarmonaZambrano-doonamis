@@ -1,0 +1,30 @@
+$primary: #1E86FB
+$primary-bg: #BCDBFE
+$secondary: #F56631
+$primary-gray: #6D758D
+$primary-bcg-color: #FCFCFC
+$primary-box-shadow: #F2F2F2
+$secondary-light-gray: #D1D1D1
+$font: #444444
+
+$unit-grid: 8px
+
+@mixin custom-scrollbar()
+  &::-webkit-scrollbar
+    width:  $unit-grid * 0.5
+
+  &::-webkit-scrollbar-thumb
+    border-radius: $unit-grid * 2
+    background: $primary-gray
+
+  &::-webkit-scrollbar-track 
+    background: $secondary-light-gray
+  
+html
+  color: $font
+  background: $primary-bcg-color
+  @include custom-scrollbar
+body
+  margin: 0
+  max-width: 100%
+  overflow-x: hidden
